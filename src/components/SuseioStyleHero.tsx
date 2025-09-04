@@ -110,7 +110,7 @@ export function SuseioStyleHero() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Left Content */}
-            <div className="lg:col-span-7 max-w-2xl">
+            <div className="lg:col-span-12 max-w-2xl">
               {/* Badge */}
               <div className="mb-8">
                 <span className="inline-block px-6 py-3 glass-effect border-border rounded-full text-foreground text-sm font-medium tracking-wide">
@@ -158,61 +158,7 @@ export function SuseioStyleHero() {
               </div>
             </div>
 
-            {/* Right 3D Description Area */}
-            <div className="lg:col-span-5 hidden lg:block">
-              <div className="relative ml-auto max-w-sm">
-                {/* 3D Card Container */}
-                <div className="relative transform rotate-y-12 perspective-1000">
-                  <div className="glass-effect border-border rounded-2xl p-8 shadow-elegant">
-                    {/* Mini Badge */}
-                    <div className="inline-block px-3 py-1 bg-primary/20 border border-primary/30 rounded-full mb-6">
-                      <span className="text-primary text-xs font-medium">Industry 4.0</span>
-                    </div>
-                    
-                    {/* 3D Title */}
-                    <h3 className="text-2xl font-bold text-foreground mb-4 leading-tight">
-                      Next-Gen Industrial
-                      <span className="block text-primary">Connectivity</span>
-                    </h3>
-                    
-                    {/* Features List */}
-                    <ul className="space-y-3 text-sm text-muted-foreground">
-                      <li className="flex items-center">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3"></div>
-                        Real-time OPC UA Server
-                      </li>
-                      <li className="flex items-center">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3"></div>
-                        SIOTH® Integration Platform
-                      </li>
-                      <li className="flex items-center">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3"></div>
-                        AI-Powered Analytics
-                      </li>
-                      <li className="flex items-center">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3"></div>
-                        Secure Data Transfer
-                      </li>
-                    </ul>
-
-                    {/* Stats */}
-                    <div className="grid grid-cols-2 gap-4 mt-6 pt-6 border-t border-border">
-                      <div>
-                        <div className="text-2xl font-bold text-primary">99.9%</div>
-                        <div className="text-xs text-muted-foreground">Uptime</div>
-                      </div>
-                      <div>
-                        <div className="text-2xl font-bold text-primary">24/7</div>
-                        <div className="text-xs text-muted-foreground">Support</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* 3D Shadow */}
-                  <div className="absolute inset-0 bg-primary/10 blur-xl transform translate-x-4 translate-y-4 -z-10 rounded-2xl"></div>
-                </div>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>
