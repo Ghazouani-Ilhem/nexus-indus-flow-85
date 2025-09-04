@@ -41,8 +41,9 @@ export const ClientsSection = () => {
   const visibleClients = clients.slice(currentIndex, currentIndex + itemsPerPage);
 
   return (
-    <section className="py-20 px-4 bg-gradient-subtle">
-      <div className="container mx-auto">
+    <section className="relative py-20 px-4 bg-gradient-subtle overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none" style={{ background: 'var(--gradient-mesh)', opacity: 0.06 }} />
+      <div className="container mx-auto relative">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 bg-gradient-tech bg-clip-text text-transparent">
             IO Technology Users

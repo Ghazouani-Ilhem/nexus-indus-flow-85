@@ -2,12 +2,12 @@
   "/_not-found/page": "app/_not-found/page.js",
   "/about/page": "app/about/page.js",
   "/ai/page": "app/ai/page.js",
-  "/contact/page": "app/contact/page.js",
   "/clients/page": "app/clients/page.js",
-  "/integration/page": "app/integration/page.js",
   "/page": "app/page.js",
   "/resources/page": "app/resources/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/opc-ua-wrapper/page": "app/opc-ua-wrapper/page.js",
+  "/integration/page": "app/integration/page.js",
   "/services/page": "app/services/page.js",
-  "/solutions/page": "app/solutions/page.js",
-  "/opc-ua-wrapper/page": "app/opc-ua-wrapper/page.js"
+  "/solutions/page": "app/solutions/page.js"
 }

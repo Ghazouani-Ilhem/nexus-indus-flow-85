@@ -47,12 +47,9 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section id="integration" className="modern-section py-12 overflow-hidden">
-      {/* Enhanced Background Elements */}
-      <div className="geometric-bg" />
-      <div className="floating-shape top-20 right-20" style={{ animationDelay: '0s' }} />
-      <div className="floating-shape bottom-32 left-16" style={{ animationDelay: '2s' }} />
-      <div className="floating-shape top-1/2 right-1/3" style={{ animationDelay: '4s' }} />
+    <section id="integration" className="relative py-16 overflow-hidden bg-gradient-subtle">
+      {/* Subtle Mesh Overlay */}
+      <div className="absolute inset-0 pointer-events-none" style={{ background: 'var(--gradient-mesh)', opacity: 0.08 }} />
 
       <div className="container mx-auto relative">
         {/* Modern Header */}

@@ -49,11 +49,9 @@ export const TestimonialsSection = () => {
   };
 
   return (
-    <section className="modern-section py-16 px-4 overflow-hidden">
-      {/* Enhanced Background Elements */}
-      <div className="geometric-bg" />
-      <div className="floating-shape top-32 right-32" style={{ animationDelay: '1.5s' }} />
-      <div className="floating-shape bottom-28 left-28" style={{ animationDelay: '3.5s' }} />
+    <section className="relative py-16 px-4 overflow-hidden bg-background">
+      {/* Subtle Mesh Overlay */}
+      <div className="absolute inset-0 pointer-events-none" style={{ background: 'var(--gradient-mesh)', opacity: 0.06 }} />
       
       <div className="container mx-auto relative">
         <div className="text-center mb-16 max-w-4xl mx-auto">
