@@ -1,5 +1,5 @@
 import { Clock, Shield, Award, Users, ArrowRight, CheckCircle, Star, Zap } from "lucide-react";
-import expertTeamImage from "@/assets/enhanced-expert-team.jpg";
+const expertTeamImage = "/assets/enhanced-expert-team.jpg";
 
 const differentiators = [
   {

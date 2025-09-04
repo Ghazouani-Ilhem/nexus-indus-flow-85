@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Network, Server, Monitor, Shield, ArrowRight, CheckCircle, Play } from "lucide-react";
 import { useState } from "react";
-import industry40Image from "@/assets/enhanced-industry40-transformation.jpg";
+const industry40Image = "/assets/enhanced-industry40-transformation.jpg";
 
 const services = [
   {

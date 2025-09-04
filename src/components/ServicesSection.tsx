@@ -11,8 +11,8 @@ import {
   ArrowRight,
   CheckCircle
 } from "lucide-react";
-import opcNetworkImage from "@/assets/opc-ua-network.jpg";
-import automationImage from "@/assets/automation-dashboard.jpg";
+const opcNetworkImage = "/assets/opc-ua-network.jpg";
+const automationImage = "/assets/automation-dashboard.jpg";
 
 const services = [
   {
