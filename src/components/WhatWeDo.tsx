@@ -5,26 +5,26 @@ import { Network, Server, Monitor, Shield } from "lucide-react";
 const services = [
   {
     icon: Network,
-    title: "SIOTH IT-OT Integration Platform",
-    description: "A scalable and modular IoT platform for IT-OT integration, data exchange and transformation.",
+    title: "SIOTH® IT-OT Integration",
+    description: "Seamless, secure, and scalable data integration across plants and enterprise systems.",
     image: "/placeholder.svg"
   },
   {
     icon: Server,
-    title: "OPC Products",
-    description: "Ensure secure and reliable exchange of data.",
+    title: "OPC UA Products",
+    description: "OPC UA wrappers, servers, and toolkits enabling reliable, interoperable connectivity.",
     image: "/placeholder.svg"
   },
   {
     icon: Monitor,
-    title: "Remote Monitoring",
-    description: "A single-window to your operations. SCADA & Dashboards all-in-one.",
+    title: "Manufacturing Operations Management",
+    description: "Measure and control production activities to maximize performance and quality.",
     image: "/placeholder.svg"
   },
   {
     icon: Shield,
-    title: "Military Surveillance",
-    description: "C4ISR based solutions to act decisively, manage, monitor, and control device.",
+    title: "Industrial Cybersecurity",
+    description: "Protect control systems and secure IT-OT integration with compliant architectures.",
     image: "/placeholder.svg"
   }
 ];
@@ -38,7 +38,7 @@ export const WhatWeDo = () => {
             What We Do
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive solutions for Industry 4.0 integration and automation
+            Systems integration, OPC UA connectivity, MOM, and cybersecurity for Industry 4.0
           </p>
         </div>
 

@@ -3,8 +3,8 @@ import { Clock, Shield, Award, Users } from "lucide-react";
 const differentiators = [
   {
     icon: Clock,
-    title: "On-budget and timely project completion",
-    description: "We deliver projects on time and within budget, ensuring your business objectives are met efficiently."
+    title: "Proven delivery and operational excellence",
+    description: "Decades of successful deployments with measurable performance improvements."
   },
   {
     icon: Shield,
@@ -13,13 +13,13 @@ const differentiators = [
   },
   {
     icon: Award,
-    title: "Compliant with the latest cybersecurity standards",
-    description: "All our products meet and exceed current cybersecurity requirements for industrial environments."
+    title: "Standards-based and future-proof",
+    description: "Built on OPC UA and best practices to ensure longevity and interoperability."
   },
   {
     icon: Users,
-    title: "Expertise in deploying solutions for the entire IT-OT ecosystem",
-    description: "Comprehensive knowledge across all aspects of industrial IT-OT integration and automation."
+    title: "Deep IT-OT expertise",
+    description: "From plant floor to cloud, spanning connectivity, analytics, and security."
   }
 ];
 
