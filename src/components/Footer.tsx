@@ -40,7 +40,7 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="relative bg-secondary bg-gradient-hero text-primary-foreground overflow-hidden">
+    <footer className="relative bg-secondary-dark bg-gradient-hero text-primary-foreground overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 tech-grid opacity-20" />
       <div className="absolute inset-0 circuit-pattern opacity-30" />
