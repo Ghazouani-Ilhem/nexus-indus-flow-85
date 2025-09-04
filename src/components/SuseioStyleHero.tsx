@@ -51,20 +51,7 @@ export function SuseioStyleHero() {
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10 tech-grid" />
 
-      {/* Vertical Social Links */}
-      <div className="fixed left-8 top-1/2 transform -translate-y-1/2 z-30 hidden lg:flex flex-col space-y-6">
-        <div className="flex flex-col space-y-4">
-          <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm font-light tracking-wider transform -rotate-90 origin-center">
-            TWITTER
-          </a>
-          <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm font-light tracking-wider transform -rotate-90 origin-center">
-            INSTAGRAM
-          </a>
-          <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm font-light tracking-wider transform -rotate-90 origin-center">
-            FACEBOOK
-          </a>
-        </div>
-      </div>
+      
 
       {/* Background Image - dynamic per slide */}
       <div className="absolute inset-0 z-0">
