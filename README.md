@@ -54,11 +54,17 @@ npm run dev
 
 This project is built with:
 
-- Vite
+- Next.js (App Router)
 - TypeScript
 - React
 - shadcn-ui
 - Tailwind CSS
+
+## Scripts
+
+- `npm run dev`: Start Next.js in development mode
+- `npm run build`: Build the production app
+- `npm start`: Start the production server
 
 ## How can I deploy this project?
 

@@ -62,7 +62,7 @@ export function SuseioStyleHero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/src/assets/ai-robot-3d.png" 
+          src="/assets/ai-robot-3d.png" 
           alt="AI Robot Hand with Industrial Connectivity" 
           className="absolute right-0 top-1/2 transform -translate-y-1/2 w-auto h-[70vh] object-contain opacity-40"
         />
