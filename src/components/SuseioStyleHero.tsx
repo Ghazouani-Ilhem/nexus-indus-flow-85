@@ -9,21 +9,27 @@ const slides = [
     title: "OPC UA Universal Server",
     subtitle: "built in minutes using SIOTH®",
     description: "An industrial automation platform blending cutting-edge connectivity, innovative OPC UA technology, and deep industrial insights to achieve transparent, measurable success at any scale.",
-    ctaText: "Discover Solutions"
+    ctaText: "Discover Solutions",
+    image: "/assets/enhanced-opc-ua-server.jpg",
+    alt: "Modern OPC UA universal server architecture"
   },
   {
     badge: "Mission Control for Industrial Data",
     title: "Real-time Industrial Analytics",
     subtitle: "powered by SIOTH® technology",
     description: "Our success is based on developing OPC UA connectivity and industrial automation solutions that have a direct impact on the growth of our clients' manufacturing operations.",
-    ctaText: "Explore Platform"
+    ctaText: "Explore Platform",
+    image: "/assets/automation-dashboard.jpg",
+    alt: "Industrial real-time analytics dashboard"
   },
   {
     badge: "Powering Global Manufacturing",
     title: "Industry 4.0 Integration",
     subtitle: "transforming operations worldwide", 
     description: "We transform industrial businesses using secure connectivity, real-time data analytics, and AI-powered insights for the future of smart manufacturing.",
-    ctaText: "Learn More"
+    ctaText: "Learn More",
+    image: "/assets/hero-industry40.jpg",
+    alt: "Industry 4.0 smart factory with connected machinery"
   }
 ];
 
@@ -60,11 +66,11 @@ export function SuseioStyleHero() {
         </div>
       </div>
 
-      {/* Background Image */}
+      {/* Background Image - dynamic per slide */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/assets/ai-robot-3d.png" 
-          alt="AI Robot Hand with Industrial Connectivity" 
+          src={currentContent.image}
+          alt={currentContent.alt || "Hero visual"}
           className="absolute right-0 top-1/2 transform -translate-y-1/2 w-auto h-[70vh] object-contain opacity-40"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-transparent"></div>
