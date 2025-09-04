@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Play, Network, Zap, Shield, Cpu } from "lucide-react";
-import opcUAServerImage from "@/assets/enhanced-opc-ua-server.jpg";
-import siothIntegrationImage from "@/assets/enhanced-sioth-integration.jpg";
-import opcConnectorsImage from "@/assets/enhanced-opc-connectors.jpg";
-import scadaMonitoringImage from "@/assets/enhanced-scada-monitoring.jpg";
+const opcUAServerImage = "/assets/enhanced-opc-ua-server.jpg";
+const siothIntegrationImage = "/assets/enhanced-sioth-integration.jpg";
+const opcConnectorsImage = "/assets/enhanced-opc-connectors.jpg";
+const scadaMonitoringImage = "/assets/enhanced-scada-monitoring.jpg";
 
 const heroContent = [
   {

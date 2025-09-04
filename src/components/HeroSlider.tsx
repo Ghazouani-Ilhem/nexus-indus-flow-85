@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, ChevronLeft, ChevronRight } from "lucide-react";
-import heroImage from "@/assets/3d-opc-connectivity.jpg";
-import opcImage from "@/assets/3d-iot-network.jpg";
-import automationImage from "@/assets/3d-automation-dashboard.jpg";
-import aiTechBackground from "@/assets/ai-tech-background-light.jpg";
+const heroImage = "/assets/3d-opc-connectivity.jpg";
+const opcImage = "/assets/3d-iot-network.jpg";
+const automationImage = "/assets/3d-automation-dashboard.jpg";
+const aiTechBackground = "/assets/ai-tech-background-light.jpg";
 
 const slides = [
   {

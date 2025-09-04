@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import heroImage from "@/assets/hero-industry40.jpg";
+const heroImage = "/assets/hero-industry40.jpg";
 import { 
   ArrowRight, 
   Play, 
