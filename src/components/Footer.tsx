@@ -13,28 +13,28 @@ import {
 
 const footerLinks = {
   solutions: [
-    { name: "OPC UA Server", href: "#" },
-    { name: "IT-OT Integration", href: "#" },
-    { name: "SIOTH® Platform", href: "#" },
-    { name: "AI Solutions", href: "#" }
+    { name: "OPC UA Server", href: "/opc-ua-wrapper" },
+    { name: "IT-OT Integration", href: "/integration" },
+    { name: "SIOTH® Platform", href: "/solutions" },
+    { name: "AI Solutions", href: "/ai" }
   ],
   resources: [
-    { name: "Documentation", href: "#" },
-    { name: "Case Studies", href: "#" },
-    { name: "White Papers", href: "#" },
-    { name: "Webinars", href: "#" }
+    { name: "Documentation", href: "/resources" },
+    { name: "Case Studies", href: "/resources" },
+    { name: "White Papers", href: "/resources" },
+    { name: "Webinars", href: "/resources" }
   ],
   company: [
-    { name: "About Us", href: "#" },
-    { name: "Careers", href: "#" },
-    { name: "Partners", href: "#" },
-    { name: "Contact", href: "#" }
+    { name: "About Us", href: "/about" },
+    { name: "Careers", href: "/about" },
+    { name: "Partners", href: "/about" },
+    { name: "Contact", href: "/contact" }
   ],
   support: [
-    { name: "Help Center", href: "#" },
-    { name: "Training", href: "#" },
-    { name: "Community", href: "#" },
-    { name: "Status", href: "#" }
+    { name: "Help Center", href: "/resources" },
+    { name: "Training", href: "/resources" },
+    { name: "Community", href: "/resources" },
+    { name: "Status", href: "/resources" }
   ]
 };
 

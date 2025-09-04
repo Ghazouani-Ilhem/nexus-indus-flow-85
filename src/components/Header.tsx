@@ -4,12 +4,12 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navigation = [
-  { name: "IT-OT Integration", href: "#integration" },
+  { name: "IT-OT Integration", href: "/integration" },
   { name: "OPC Products", href: "/opc-ua-wrapper" },
-  { name: "AI Solutions", href: "#ai" },
-  { name: "Resources", href: "#resources" },
-  { name: "About", href: "#about" },
-  { name: "Contact", href: "#contact" }
+  { name: "AI Solutions", href: "/ai" },
+  { name: "Resources", href: "/resources" },
+  { name: "About", href: "/about" },
+  { name: "Contact", href: "/contact" }
 ];
 
 export function Header() {
