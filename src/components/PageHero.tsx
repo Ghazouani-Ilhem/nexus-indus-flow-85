@@ -25,6 +25,7 @@ export function PageHero({ badge, title, subtitle, description, ctaText, imageUr
           className="w-full h-full object-cover opacity-70"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-secondary/60 via-secondary/40 to-primary/30" />
+        <div className="absolute inset-0 pointer-events-none" style={{ background: 'var(--gradient-mesh)', opacity: 0.15 }} />
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
@@ -52,6 +53,9 @@ export function PageHero({ badge, title, subtitle, description, ctaText, imageUr
           </Button>
         ) : null}
       </div>
+
+      <div className="absolute top-1/4 right-1/4 w-16 h-16 bg-accent/20 rounded-full opacity-40 animate-float blur-sm" />
+      <div className="absolute bottom-1/3 left-1/4 w-12 h-12 bg-primary/20 rounded-lg opacity-30 animate-float blur-sm" style={{ animationDelay: '1.5s' }} />
     </section>
   );
 }
