@@ -1,4 +1,4 @@
-import { HeroSection } from "@/components/HeroSection";
+import { SuseioStyleHero } from "@/components/SuseioStyleHero";
 import { WhatWeDo } from "@/components/WhatWeDo";
 import { WhatMakesUsDifferent } from "@/components/WhatMakesUsDifferent";
 import { ServicesSection } from "@/components/ServicesSection";
@@ -8,7 +8,7 @@ import { TestimonialsSection } from "@/components/TestimonialsSection";
 export default function Page() {
   return (
     <main className="flex flex-col">
-      <HeroSection />
+      <SuseioStyleHero />
       <div className="container mx-auto px-4 space-y-24 py-16">
         <WhatWeDo />
         <WhatMakesUsDifferent />
