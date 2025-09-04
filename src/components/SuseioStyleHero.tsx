@@ -76,34 +76,7 @@ export function SuseioStyleHero() {
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-transparent"></div>
       </div>
 
-      {/* Floating 3D Elements */}
-      <div className="absolute inset-0 z-5 pointer-events-none">
-        {/* OPC UA Icon */}
-        <div className="absolute top-1/4 right-1/4 w-16 h-16 glass-effect border-primary/30 rounded-lg flex items-center justify-center animate-float">
-          <div className="w-8 h-8 bg-primary rounded opacity-80"></div>
-        </div>
-        
-        {/* SIOTH Badge */}
-        <div className="absolute top-1/3 right-1/3 px-4 py-2 glass-effect border-border rounded-lg animate-float" style={{animationDelay: '1s'}}>
-          <span className="text-foreground text-sm font-medium">SIOTH®</span>
-        </div>
-        
-        {/* Data Flow Elements */}
-        <div className="absolute bottom-1/3 right-1/5 w-12 h-12 bg-secondary/20 backdrop-blur-sm border border-secondary/30 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/2 w-10 h-10 bg-accent/20 backdrop-blur-sm border border-accent/30 rounded-full animate-pulse" style={{animationDelay: '1.5s'}}></div>
-        
-        {/* Connection Lines */}
-        <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.6" />
-              <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.1" />
-            </linearGradient>
-          </defs>
-          <path d="M 60% 30% Q 70% 40% 80% 35%" stroke="url(#lineGradient)" strokeWidth="2" fill="none" opacity="0.6" />
-          <path d="M 65% 70% Q 75% 60% 85% 65%" stroke="url(#lineGradient)" strokeWidth="2" fill="none" opacity="0.4" />
-        </svg>
-      </div>
+      
 
       {/* Main Content */}
       <div className="relative z-10 flex items-center min-h-screen">
