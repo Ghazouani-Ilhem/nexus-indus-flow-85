@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight, Play, Sparkles, Zap } from "lucide-react";
 
 const slides = [
   {
@@ -48,19 +48,39 @@ export function SuseioStyleHero() {
 
   return (
     <section className="relative min-h-screen bg-background overflow-hidden dark">
-      {/* Background Pattern */}
+      {/* Enhanced Background Pattern */}
       <div className="absolute inset-0 opacity-10 tech-grid" />
-
       
-
-      {/* Background Image - dynamic per slide */}
+      {/* Animated Background Elements */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={currentContent.image}
-          alt={currentContent.alt || "Hero visual"}
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 w-auto h-[70vh] object-contain opacity-40"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-transparent"></div>
+        {/* Floating Particles */}
+        <div className="absolute top-20 left-10 w-2 h-2 bg-primary/30 rounded-full animate-float" style={{ animationDelay: '0s' }} />
+        <div className="absolute top-40 right-20 w-1 h-1 bg-accent/40 rounded-full animate-float" style={{ animationDelay: '1s' }} />
+        <div className="absolute bottom-40 left-20 w-3 h-3 bg-primary/20 rounded-full animate-float" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-60 left-1/3 w-1.5 h-1.5 bg-accent/30 rounded-full animate-float" style={{ animationDelay: '0.5s' }} />
+        
+        {/* Gradient Mesh Background */}
+        <div className="absolute inset-0 bg-gradient-mesh opacity-20" />
+        
+        {/* Animated Grid Lines */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary to-transparent animate-pulse" />
+          <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent to-transparent animate-pulse" style={{ animationDelay: '1s' }} />
+        </div>
+      </div>
+
+      {/* Background Image - dynamic per slide with enhanced effects */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-auto h-[70vh] opacity-40 transition-all duration-1000 ease-out">
+          <img 
+            src={currentContent.image}
+            alt={currentContent.alt || "Hero visual"}
+            className="w-full h-full object-contain filter drop-shadow-2xl"
+          />
+          {/* Image glow effect */}
+          <div className="absolute inset-0 bg-gradient-to-l from-primary/20 to-transparent blur-xl" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-transparent"></div>
       </div>
 
       
@@ -71,34 +91,39 @@ export function SuseioStyleHero() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Left Content */}
             <div className="lg:col-span-12 max-w-2xl">
-              {/* Badge */}
+              {/* Enhanced Badge */}
               <div className="mb-8">
-                <span className="inline-block px-6 py-3 glass-effect border-border rounded-full text-foreground text-sm font-medium tracking-wide">
-                  {currentContent.badge}
-                </span>
+                <div className="inline-flex items-center space-x-2 px-6 py-3 glass-effect border border-primary/20 rounded-full text-foreground text-sm font-medium tracking-wide backdrop-blur-xl shadow-glass hover:shadow-glow transition-all duration-300 group">
+                  <Sparkles className="w-4 h-4 text-primary group-hover:animate-pulse" />
+                  <span>{currentContent.badge}</span>
+                </div>
               </div>
 
-              {/* Main Content */}
+              {/* Enhanced Main Content */}
               <div className="space-y-8 mb-12">
                 <h1 className="font-display font-bold text-foreground leading-[0.9] tracking-tight">
-                  <span className="block text-4xl md:text-5xl lg:text-6xl">{currentContent.title}</span>
-                  <span className="block text-2xl md:text-3xl lg:text-4xl text-primary mt-4 font-light">
+                  <span className="block text-4xl md:text-5xl lg:text-6xl bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent animate-fade-in-up">
+                    {currentContent.title}
+                  </span>
+                  <span className="block text-2xl md:text-3xl lg:text-4xl text-primary mt-4 font-light animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
                     {currentContent.subtitle}
                   </span>
                 </h1>
                 
-                <p className="text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed font-light">
+                <p className="text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed font-light animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
                   {currentContent.description}
                 </p>
               </div>
 
-              {/* CTA Button */}
+              {/* Enhanced CTA Button */}
               <div className="mb-12">
                 <Button 
                   variant="hero"
                   size="lg"
-                  className="group transition-all duration-300"
+                  className="group transition-all duration-300 hover:scale-105 animate-fade-in-up"
+                  style={{ animationDelay: '0.6s' }}
                 >
+                  <Zap className="w-5 h-5 mr-2 group-hover:animate-pulse" />
                   <span className="font-medium">{currentContent.ctaText}</span>
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </Button>
@@ -123,19 +148,23 @@ export function SuseioStyleHero() {
         </div>
       </div>
 
-      {/* Slide Indicators */}
+      {/* Enhanced Slide Indicators */}
       <div className="absolute bottom-8 left-8 z-20">
         <div className="flex space-x-3">
           {slides.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              className={`relative rounded-full transition-all duration-300 group ${
                 index === currentSlide 
-                  ? 'bg-primary w-8' 
-                  : 'bg-muted-foreground/30 hover:bg-muted-foreground/50'
+                  ? 'w-8 h-2 bg-gradient-primary shadow-glow' 
+                  : 'w-2 h-2 bg-muted-foreground/30 hover:bg-muted-foreground/50 hover:w-6'
               }`}
-            />
+            >
+              {index === currentSlide && (
+                <div className="absolute inset-0 bg-gradient-primary rounded-full animate-pulse opacity-50" />
+              )}
+            </button>
           ))}
         </div>
       </div>

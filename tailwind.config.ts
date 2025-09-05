@@ -139,7 +139,9 @@ export default {
 				'data-flow': 'data-flow 3s linear infinite',
 				'gradient-shift': 'gradient-shift 3s ease-in-out infinite',
 				'cyber-glow': 'cyber-glow 4s ease-in-out infinite',
-				'float-3d': 'float-3d 6s ease-in-out infinite'
+				'float-3d': 'float-3d 6s ease-in-out infinite',
+				'float-particle': 'float-particle 6s ease-in-out infinite',
+				'gradient-shift': 'gradient-shift 3s ease-in-out infinite'
 			},
 			transitionTimingFunction: {
 				'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
