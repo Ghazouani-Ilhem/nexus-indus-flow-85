@@ -52,7 +52,7 @@ export function Header() {
             </div>
           </div>
 
-          {/* Desktop Navigation */}
+          {/* Enhanced Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
               {navigation.map((item) => (
@@ -60,13 +60,17 @@ export function Header() {
                   key={item.name}
                   href={item.href}
                   className={cn(
-                    "transition-colors duration-200 text-sm font-medium",
+                    "relative transition-all duration-300 text-sm font-medium group",
                     pathname === item.href
                       ? "text-foreground"
                       : "text-muted-foreground hover:text-foreground"
                   )}
                 >
-                  {item.name}
+                  <span className="relative z-10">{item.name}</span>
+                  {pathname === item.href && (
+                    <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-tech rounded-full" />
+                  )}
+                  <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-tech rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
                 </Link>
               ))}
               <div className="pl-4 ml-2 border-l border-primary/20">
@@ -75,9 +79,13 @@ export function Header() {
             </div>
           </div>
 
-          {/* CTA Button */}
+          {/* Enhanced CTA Button */}
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="hero" size="sm" className="font-medium">
+            <Button 
+              variant="hero" 
+              size="sm" 
+              className="font-medium hover:scale-105 transition-transform duration-300 hover:shadow-glow"
+            >
               Get Started
             </Button>
           </div>
@@ -95,7 +103,7 @@ export function Header() {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Enhanced Mobile Navigation */}
         <div className={cn(
           "md:hidden transition-all duration-500 overflow-hidden",
           isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
@@ -106,25 +114,29 @@ export function Header() {
               <Button 
                 variant="hero" 
                 size="sm"
-                className="font-medium"
+                className="font-medium hover:scale-105 transition-transform duration-300"
               >
                 Get Started
               </Button>
             </div>
-            {navigation.map((item) => (
+            {navigation.map((item, index) => (
               <Link
                 key={item.name}
                 href={item.href}
                 className={cn(
-                  "block px-4 py-3 text-base font-medium rounded-xl transition-all duration-300 relative group",
+                  "block px-4 py-3 text-base font-medium rounded-xl transition-all duration-300 relative group hover-lift",
                   pathname === item.href
                     ? "text-foreground bg-primary/10"
                     : "text-muted-foreground hover:text-primary hover:bg-primary/10"
                 )}
                 onClick={() => setIsOpen(false)}
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <span className="relative z-10">{item.name}</span>
                 <div className="absolute inset-0 bg-gradient-tech opacity-0 group-hover:opacity-5 rounded-xl transition-opacity duration-300" />
+                {pathname === item.href && (
+                  <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-6 bg-gradient-tech rounded-r-full" />
+                )}
               </Link>
             ))}
           </div>

@@ -139,7 +139,12 @@ export default {
 				'data-flow': 'data-flow 3s linear infinite',
 				'gradient-shift': 'gradient-shift 3s ease-in-out infinite',
 				'cyber-glow': 'cyber-glow 4s ease-in-out infinite',
-				'float-3d': 'float-3d 6s ease-in-out infinite'
+				'float-3d': 'float-3d 6s ease-in-out infinite',
+				'shimmer': 'shimmer 2s infinite',
+				'loading': 'loading 1.5s infinite',
+				'scale-in': 'scale-in 0.3s ease-out',
+				'slide-up': 'slide-up 0.6s ease-out',
+				'bounce-subtle': 'bounce-subtle 2s ease-in-out infinite'
 			},
 			transitionTimingFunction: {
 				'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
