@@ -62,22 +62,25 @@ export const TestimonialsSection = () => {
         />
 
         <div className="max-w-4xl mx-auto">
-          <Card className="relative border border-border rounded-2xl shadow-card">
+          <Card className="group relative border border-border rounded-2xl shadow-card hover:shadow-elegant transition-all duration-500 hover:-translate-y-1 overflow-hidden">
+            {/* Background Gradient */}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            
             <CardContent className="p-8 md:p-12 relative z-10">
               <div className="relative">
-                <Quote className="absolute -top-4 -left-4 w-12 h-12 text-primary/20" />
+                <Quote className="absolute -top-4 -left-4 w-12 h-12 text-primary/20 group-hover:text-primary/30 transition-colors duration-300" />
                 
-                <blockquote className="text-lg md:text-xl leading-relaxed text-muted-foreground mb-8 relative z-10">
+                <blockquote className="text-lg md:text-xl leading-relaxed text-muted-foreground mb-8 relative z-10 group-hover:text-foreground/90 transition-colors duration-300">
                   "{testimonials[currentIndex].text}"
                 </blockquote>
                 
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between">
                   <div>
-                    <cite className="text-xl font-display font-semibold text-foreground not-italic">
+                    <cite className="text-xl font-display font-semibold text-foreground not-italic group-hover:text-primary transition-colors duration-300">
                       {testimonials[currentIndex].name}
                     </cite>
                     {testimonials[currentIndex].company && (
-                      <p className="text-primary mt-1 font-medium">
+                      <p className="text-primary mt-1 font-medium group-hover:text-accent transition-colors duration-300">
                         {testimonials[currentIndex].company}
                       </p>
                     )}
@@ -88,7 +91,7 @@ export const TestimonialsSection = () => {
                       variant="outline"
                       size="icon"
                       onClick={prevTestimonial}
-                      className="rounded-full"
+                      className="rounded-full hover:scale-110 hover:shadow-glow transition-all duration-300"
                     >
                       <ChevronLeft className="w-4 h-4" />
                     </Button>
@@ -96,7 +99,7 @@ export const TestimonialsSection = () => {
                       variant="outline"
                       size="icon"
                       onClick={nextTestimonial}
-                      className="rounded-full"
+                      className="rounded-full hover:scale-110 hover:shadow-glow transition-all duration-300"
                     >
                       <ChevronRight className="w-4 h-4" />
                     </Button>
@@ -111,12 +114,16 @@ export const TestimonialsSection = () => {
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`h-2 rounded-full transition-all duration-300 ${
+                className={`relative h-2 rounded-full transition-all duration-500 group ${
                   index === currentIndex 
-                    ? 'bg-primary w-8' 
-                    : 'bg-primary/30 hover:bg-primary/50 w-2'
+                    ? 'w-8 bg-gradient-tech shadow-glow' 
+                    : 'w-2 bg-primary/30 hover:bg-primary/50 hover:scale-125'
                 }`}
-              />
+              >
+                {index === currentIndex && (
+                  <div className="absolute inset-0 bg-gradient-tech rounded-full animate-pulse" />
+                )}
+              </button>
             ))}
           </div>
         </div>

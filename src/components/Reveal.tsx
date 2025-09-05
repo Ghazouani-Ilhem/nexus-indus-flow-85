@@ -25,7 +25,10 @@ export function Reveal({ children, delayMs = 0, yOffsetPx = 24 }: RevealProps) {
           }
         });
       },
-      { threshold: 0.1 }
+      { 
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px' // Start animation slightly before element is fully visible
+      }
     );
 
     observer.observe(element);
@@ -35,10 +38,11 @@ export function Reveal({ children, delayMs = 0, yOffsetPx = 24 }: RevealProps) {
   return (
     <div
       ref={ref}
+      className="mobile-touch"
       style={{
         transform: isVisible ? "translateY(0px)" : `translateY(${yOffsetPx}px)`,
         opacity: isVisible ? 1 : 0,
-        transition: "transform 600ms var(--smooth), opacity 600ms var(--smooth)",
+        transition: "transform 800ms cubic-bezier(0.4, 0, 0.2, 1), opacity 800ms cubic-bezier(0.4, 0, 0.2, 1)",
         willChange: "transform, opacity",
       }}
     >
