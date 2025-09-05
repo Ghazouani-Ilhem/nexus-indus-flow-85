@@ -1,7 +1,9 @@
+"use client";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { SectionHeader } from "@/components/SectionHeader";
 
 const testimonials = [
   {
@@ -48,34 +50,19 @@ export const TestimonialsSection = () => {
   };
 
   return (
-    <section className="modern-section py-16 px-4 overflow-hidden">
-      {/* Enhanced Background Elements */}
-      <div className="geometric-bg" />
-      <div className="floating-shape top-32 right-32" style={{ animationDelay: '1.5s' }} />
-      <div className="floating-shape bottom-28 left-28" style={{ animationDelay: '3.5s' }} />
+    <section className="relative py-16 px-4 overflow-hidden bg-background">
+      {/* Subtle Mesh Overlay */}
+      <div className="absolute inset-0 pointer-events-none" style={{ background: 'var(--gradient-mesh)', opacity: 0.06 }} />
       
       <div className="container mx-auto relative">
-        <div className="text-center mb-16 max-w-4xl mx-auto">
-          <div className="inline-flex items-center px-6 py-3 rounded-2xl glass-effect border border-accent/20 text-accent font-semibold mb-8 text-sm">
-            <div className="w-3 h-3 bg-accent rounded-full mr-3 animate-scale-pulse" />
-            Client Testimonials
-          </div>
-          <h2 className="text-4xl md:text-6xl font-display font-bold mb-6 text-gradient-tech leading-tight">
-            What Our Clients Say
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Hear from industry leaders who trust our solutions for their critical operations.
-          </p>
-        </div>
+        <SectionHeader
+          eyebrow="Client Testimonials"
+          title="What Our Clients Say"
+          subtitle="Hear from industry leaders who trust our solutions for their critical operations."
+        />
 
         <div className="max-w-4xl mx-auto">
-          <Card className="group relative overflow-hidden ai-interface-card border border-primary/20 hover:border-primary/40 transition-all duration-700 hover:shadow-glow">
-            {/* Background Animation */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-            
-            {/* Top Border Animation */}
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-tech transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
-            
+          <Card className="relative border border-border rounded-2xl shadow-card">
             <CardContent className="p-8 md:p-12 relative z-10">
               <div className="relative">
                 <Quote className="absolute -top-4 -left-4 w-12 h-12 text-primary/20" />
@@ -101,7 +88,7 @@ export const TestimonialsSection = () => {
                       variant="outline"
                       size="icon"
                       onClick={prevTestimonial}
-                      className="rounded-full border-primary/20 hover:border-primary/50 hover:bg-primary/10"
+                      className="rounded-full"
                     >
                       <ChevronLeft className="w-4 h-4" />
                     </Button>
@@ -109,7 +96,7 @@ export const TestimonialsSection = () => {
                       variant="outline"
                       size="icon"
                       onClick={nextTestimonial}
-                      className="rounded-full border-primary/20 hover:border-primary/50 hover:bg-primary/10"
+                      className="rounded-full"
                     >
                       <ChevronRight className="w-4 h-4" />
                     </Button>
@@ -119,7 +106,6 @@ export const TestimonialsSection = () => {
             </CardContent>
           </Card>
           
-          {/* Enhanced Dots indicator */}
           <div className="flex justify-center mt-8 gap-2">
             {testimonials.map((_, index) => (
               <button

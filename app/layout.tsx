@@ -9,11 +9,19 @@ export const metadata: Metadata = {
 }
 
 import Providers from './providers'
+import ClientHeader from './client-header'
+import ClientFooter from './client-footer'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${jetBrains.variable}`}>
-      <body className='min-h-screen'><Providers>{children}</Providers></body>
+      <body className='min-h-screen'>
+        <Providers>
+          <ClientHeader />
+          {children}
+          <ClientFooter />
+        </Providers>
+      </body>
     </html>
   )
 }

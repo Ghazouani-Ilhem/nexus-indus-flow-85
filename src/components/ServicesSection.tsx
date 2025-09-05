@@ -11,6 +11,7 @@ import {
   ArrowRight,
   CheckCircle
 } from "lucide-react";
+import { SectionHeader } from "@/components/SectionHeader";
 const opcNetworkImage = "/assets/opc-ua-network.jpg";
 const automationImage = "/assets/automation-dashboard.jpg";
 
@@ -47,29 +48,16 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section id="integration" className="modern-section py-12 overflow-hidden">
-      {/* Enhanced Background Elements */}
-      <div className="geometric-bg" />
-      <div className="floating-shape top-20 right-20" style={{ animationDelay: '0s' }} />
-      <div className="floating-shape bottom-32 left-16" style={{ animationDelay: '2s' }} />
-      <div className="floating-shape top-1/2 right-1/3" style={{ animationDelay: '4s' }} />
+    <section id="integration" className="relative py-16 overflow-hidden bg-gradient-subtle">
+      {/* Subtle Mesh Overlay */}
+      <div className="absolute inset-0 pointer-events-none" style={{ background: 'var(--gradient-mesh)', opacity: 0.08 }} />
 
       <div className="container mx-auto relative">
-        {/* Modern Header */}
-        <div className="text-center mb-12 max-w-4xl mx-auto">
-          <div className="inline-flex items-center px-6 py-3 rounded-2xl glass-effect border border-accent/20 text-accent font-semibold mb-8 text-sm">
-            <div className="w-3 h-3 bg-accent rounded-full mr-3 animate-scale-pulse" />
-            Our Solutions
-          </div>
-          
-          <h2 className="text-4xl md:text-6xl font-display font-bold mb-6 text-gradient-tech leading-tight">
-            Complete Industry 4.0 <br className="hidden md:block" />Ecosystem
-          </h2>
-          
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Industrial automation solutions to accelerate your digital transformation journey.
-          </p>
-        </div>
+        <SectionHeader
+          eyebrow="Our Solutions"
+          title="Complete Industry 4.0 Ecosystem"
+          subtitle="Industrial automation solutions to accelerate your digital transformation journey."
+        />
 
         {/* Enhanced Featured Cards */}
         <div className="grid md:grid-cols-2 gap-6 mb-12">

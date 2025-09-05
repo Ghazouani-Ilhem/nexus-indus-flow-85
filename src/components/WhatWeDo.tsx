@@ -1,60 +1,58 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Network, Server, Monitor, Shield } from "lucide-react";
+import { SectionHeader } from "@/components/SectionHeader";
 
 const services = [
   {
     icon: Network,
-    title: "SIOTH IT-OT Integration Platform",
-    description: "A scalable and modular IoT platform for IT-OT integration, data exchange and transformation.",
+    title: "SIOTH® IT-OT Integration",
+    description: "Seamless, secure, and scalable data integration across plants and enterprise systems.",
     image: "/placeholder.svg"
   },
   {
     icon: Server,
-    title: "OPC Products",
-    description: "Ensure secure and reliable exchange of data.",
+    title: "OPC UA Products",
+    description: "OPC UA wrappers, servers, and toolkits enabling reliable, interoperable connectivity.",
     image: "/placeholder.svg"
   },
   {
     icon: Monitor,
-    title: "Remote Monitoring",
-    description: "A single-window to your operations. SCADA & Dashboards all-in-one.",
+    title: "Manufacturing Operations Management",
+    description: "Measure and control production activities to maximize performance and quality.",
     image: "/placeholder.svg"
   },
   {
     icon: Shield,
-    title: "Military Surveillance",
-    description: "C4ISR based solutions to act decisively, manage, monitor, and control device.",
+    title: "Industrial Cybersecurity",
+    description: "Protect control systems and secure IT-OT integration with compliant architectures.",
     image: "/placeholder.svg"
   }
 ];
 
 export const WhatWeDo = () => {
   return (
-    <section className="py-20 px-4 bg-gradient-subtle">
+    <section className="py-20 px-4 bg-background">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 bg-gradient-tech bg-clip-text text-transparent">
-            What We Do
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive solutions for Industry 4.0 integration and automation
-          </p>
-        </div>
+        <SectionHeader
+          eyebrow="Capabilities"
+          title="What We Do"
+          subtitle="Systems integration, OPC UA connectivity, MOM, and cybersecurity for Industry 4.0"
+        />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className="group relative overflow-hidden bg-card/50 backdrop-blur-sm border-primary/20 hover:border-primary/50 transition-all duration-500 hover:shadow-glow"
+              className="relative border border-border hover:border-primary/30 transition-colors duration-300 rounded-2xl shadow-card hover:shadow-elegant"
             >
               <CardHeader className="text-center pb-4">
-                <div className="mb-4 relative">
-                  <div className="w-20 h-20 mx-auto rounded-full bg-gradient-primary p-4 shadow-glow">
-                    <service.icon className="w-full h-full text-primary-foreground" />
+                <div className="mb-4">
+                  <div className="w-16 h-16 mx-auto rounded-xl bg-primary/10 flex items-center justify-center">
+                    <service.icon className="w-8 h-8 text-primary" />
                   </div>
                 </div>
-                <CardTitle className="text-xl font-display text-foreground">
+                <CardTitle className="text-lg font-display text-foreground">
                   {service.title}
                 </CardTitle>
               </CardHeader>
