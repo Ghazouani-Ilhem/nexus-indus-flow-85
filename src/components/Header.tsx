@@ -1,11 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const navigation = [
   { name: "IT-OT Integration", href: "/integration" },
@@ -20,8 +21,21 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 glass-effect backdrop-blur-xl border-b border-primary/20">
+    <header className={cn(
+      "fixed top-0 left-0 right-0 z-50 backdrop-blur-xl transition-all duration-300",
+      "border-b",
+      scrolled ? "glass-effect border-primary/30 shadow-elegant" : "bg-transparent border-transparent"
+    )}>
       <nav className="container mx-auto px-4">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -40,7 +54,7 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="ml-10 flex items-center space-x-8">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
@@ -55,12 +69,15 @@ export function Header() {
                   {item.name}
                 </Link>
               ))}
+              <div className="pl-4 ml-2 border-l border-primary/20">
+                <ThemeToggle />
+              </div>
             </div>
           </div>
 
           {/* CTA Button */}
-          <div className="hidden md:block">
-            <Button variant="default" size="sm" className="font-medium bg-gradient-primary hover:shadow-glow text-primary-foreground transition-all duration-300">
+          <div className="hidden md:flex items-center gap-3">
+            <Button variant="hero" size="sm" className="font-medium">
               Get Started
             </Button>
           </div>
@@ -84,6 +101,16 @@ export function Header() {
           isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         )}>
           <div className="px-4 pt-4 pb-6 space-y-2 ai-interface-card backdrop-blur-2xl rounded-2xl mt-4 border border-primary/20 shadow-glow">
+            <div className="flex items-center justify-between pb-2">
+              <ThemeToggle />
+              <Button 
+                variant="hero" 
+                size="sm"
+                className="font-medium"
+              >
+                Get Started
+              </Button>
+            </div>
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -100,15 +127,6 @@ export function Header() {
                 <div className="absolute inset-0 bg-gradient-tech opacity-0 group-hover:opacity-5 rounded-xl transition-opacity duration-300" />
               </Link>
             ))}
-            <div className="pt-4 border-t border-primary/20 mt-4">
-              <Button 
-                variant="default" 
-                size="lg"
-                className="w-full font-medium bg-gradient-primary hover:shadow-glow"
-              >
-                Get Started
-              </Button>
-            </div>
           </div>
         </div>
       </nav>
