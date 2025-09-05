@@ -42,8 +42,8 @@ export function Footer() {
   return (
     <footer className="relative bg-secondary-dark bg-gradient-hero text-primary-foreground overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 tech-grid opacity-20" />
-      <div className="absolute inset-0 circuit-pattern opacity-30" />
+      <div className="absolute inset-0 tech-grid opacity-10" />
+      <div className="absolute inset-0 circuit-pattern opacity-20" />
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
@@ -153,7 +153,7 @@ export function Footer() {
                 <Button 
                   variant="default"
                   size="lg"
-                  className="w-full group bg-gradient-primary hover:shadow-glow"
+                  className="w-full group bg-gradient-primary hover:shadow-glow shadow-card"
                 >
                   <span>Subscribe</span>
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />

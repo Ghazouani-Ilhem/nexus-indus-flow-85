@@ -34,7 +34,7 @@ export function Header() {
     <header className={cn(
       "fixed top-0 left-0 right-0 z-50 backdrop-blur-xl transition-all duration-300",
       "border-b",
-      scrolled ? "glass-effect border-primary/30 shadow-elegant" : "bg-transparent border-transparent"
+      scrolled ? "glass-effect border-primary/30 shadow-elegant" : "bg-background/40 border-transparent"
     )}>
       <nav className="container mx-auto px-4">
         <div className="flex justify-between items-center h-20">
@@ -77,7 +77,7 @@ export function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="hero" size="sm" className="font-medium">
+            <Button variant="hero" size="sm" className="font-medium shadow-card">
               Get Started
             </Button>
           </div>
@@ -106,7 +106,7 @@ export function Header() {
               <Button 
                 variant="hero" 
                 size="sm"
-                className="font-medium"
+                className="font-medium shadow-card"
               >
                 Get Started
               </Button>
