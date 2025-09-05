@@ -1,4 +1,5 @@
 import { Clock, Shield, Award, Users } from "lucide-react";
+import { SectionHeader } from "@/components/SectionHeader";
 
 const differentiators = [
   {
@@ -27,32 +28,29 @@ export const WhatMakesUsDifferent = () => {
   return (
     <section className="py-20 px-4 bg-background">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 bg-gradient-tech bg-clip-text text-transparent">
-            What Makes Us Different
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Discover the key advantages that set us apart in the Industry 4.0 landscape
-          </p>
-        </div>
+        <SectionHeader
+          eyebrow="Why Partner With Us"
+          title="What Makes Us Different"
+          subtitle="Discover the key advantages that set us apart in the Industry 4.0 landscape"
+        />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {differentiators.map((item, index) => (
             <div 
               key={index}
-              className="group text-center p-8 rounded-2xl bg-gradient-glass border border-primary/20 backdrop-blur-sm hover:border-primary/50 transition-all duration-500 hover:shadow-glow hover:-translate-y-2"
+              className="text-center p-8 rounded-2xl border border-border hover:border-primary/30 transition-colors duration-300 shadow-card hover:shadow-elegant"
             >
-              <div className="mb-6 relative">
-                <div className="w-16 h-16 mx-auto rounded-full bg-gradient-primary p-3 shadow-tech group-hover:animate-tech-pulse">
-                  <item.icon className="w-full h-full text-primary-foreground" />
+              <div className="mb-6">
+                <div className="w-14 h-14 mx-auto rounded-xl bg-primary/10 flex items-center justify-center">
+                  <item.icon className="w-7 h-7 text-primary" />
                 </div>
               </div>
               
-              <h3 className="text-xl font-display font-semibold mb-4 text-foreground">
+              <h3 className="text-lg font-display font-semibold mb-3 text-foreground">
                 {item.title}
               </h3>
               
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 {item.description}
               </p>
             </div>

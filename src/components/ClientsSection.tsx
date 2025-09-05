@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { SectionHeader } from "@/components/SectionHeader";
 
 const clients = [
   { name: "Hanwha Chemical", logo: "/placeholder.svg" },
@@ -44,41 +45,34 @@ export const ClientsSection = () => {
     <section className="relative py-20 px-4 bg-gradient-subtle overflow-hidden">
       <div className="absolute inset-0 pointer-events-none" style={{ background: 'var(--gradient-mesh)', opacity: 0.06 }} />
       <div className="container mx-auto relative">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 bg-gradient-tech bg-clip-text text-transparent">
-            IO Technology Users
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Trusted by industry leaders worldwide for mission-critical operations
-          </p>
-        </div>
+        <SectionHeader
+          eyebrow="Trusted by Industry Leaders"
+          title="IO Technology Users"
+          subtitle="Trusted by industry leaders worldwide for mission-critical operations"
+        />
 
         <div className="relative overflow-hidden">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 items-center justify-items-center">
             {visibleClients.map((client, index) => (
               <div 
                 key={`${client.name}-${currentIndex}-${index}`}
-                className="group relative p-6 rounded-xl bg-card/30 backdrop-blur-sm border border-primary/10 hover:border-primary/30 transition-all duration-500 hover:shadow-tech w-full h-24 flex items-center justify-center animate-fade-in-up"
+                className="group relative p-5 rounded-xl border border-border hover:border-primary/30 transition-colors duration-300 w-full h-20 flex items-center justify-center bg-card/50"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="w-full h-full flex items-center justify-center">
-                  <div className="w-12 h-12 rounded-full bg-gradient-primary opacity-60 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <span className="text-xs font-semibold text-primary-foreground">
+                  <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center">
+                    <span className="text-xs font-semibold text-primary">
                       {client.name.split(' ').map(word => word[0]).join('').slice(0, 2)}
                     </span>
                   </div>
                 </div>
-                
-                {/* Tooltip */}
-                <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-card border border-primary/20 px-3 py-1 rounded-lg text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-10 shadow-tech">
+                <div className="absolute -top-9 left-1/2 transform -translate-x-1/2 bg-card border border-border px-2.5 py-1 rounded text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-10 shadow-card">
                   {client.name}
                   <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-card"></div>
                 </div>
               </div>
             ))}
           </div>
-          
-          {/* Progress indicators */}
           <div className="flex justify-center mt-8 gap-2">
             {Array.from({ length: Math.ceil(clients.length / itemsPerPage) }).map((_, index) => (
               <button
@@ -86,7 +80,7 @@ export const ClientsSection = () => {
                 onClick={() => setCurrentIndex(index * itemsPerPage)}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
                   Math.floor(currentIndex / itemsPerPage) === index 
-                    ? 'bg-primary w-8' 
+                    ? 'bg-primary w-6' 
                     : 'bg-primary/30 hover:bg-primary/50'
                 }`}
               />
