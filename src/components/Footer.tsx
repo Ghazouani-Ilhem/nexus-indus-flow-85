@@ -40,24 +40,24 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="relative bg-secondary-dark bg-gradient-hero text-primary-foreground overflow-hidden">
+    <footer className="relative bg-secondary-dark bg-gradient-hero text-primary-foreground overflow-hidden border-t border-border/60">
       {/* Background Pattern */}
       <div className="absolute inset-0 tech-grid opacity-20" />
       <div className="absolute inset-0 circuit-pattern opacity-30" />
       
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative container mx-auto px-4">
         {/* Main Footer Content */}
-        <div className="py-16">
-          <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-12">
+        <div className="py-12 md:py-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-10 lg:gap-12">
             {/* Brand Section */}
             <div className="lg:col-span-2">
-              <div className="flex items-center space-x-3 mb-8">
-                <div className="w-12 h-12 bg-gradient-tech rounded-2xl flex items-center justify-center shadow-glow">
-                  <div className="w-6 h-6 bg-primary-foreground rounded-lg" />
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="w-10 h-10 bg-gradient-tech rounded-2xl flex items-center justify-center shadow-glow">
+                  <div className="w-5 h-5 bg-primary-foreground rounded-lg" />
                 </div>
-                <span className="text-2xl font-display font-bold text-gradient-tech">Integration Objects</span>
+                <span className="text-xl md:text-2xl font-display font-bold text-gradient-tech">Integration Objects</span>
               </div>
-              <p className="text-primary-foreground/80 mb-8 leading-relaxed font-body text-lg">
+              <p className="text-primary-foreground/80 mb-6 leading-relaxed font-body">
                 Empowering Industry 4.0 transformation through innovative OPC UA solutions, 
                 AI-powered automation, and seamless IT-OT integration.
               </p>
@@ -87,7 +87,7 @@ export function Footer() {
 
             {/* Solutions */}
             <div>
-              <h3 className="font-display font-semibold mb-6 text-secondary text-lg">Solutions</h3>
+              <h3 className="font-display font-semibold mb-4 text-secondary">Solutions</h3>
               <ul className="space-y-4">
                 {footerLinks.solutions.map((link) => (
                   <li key={link.name}>
@@ -105,7 +105,7 @@ export function Footer() {
 
             {/* Resources */}
             <div>
-              <h3 className="font-display font-semibold mb-6 text-secondary text-lg">Resources</h3>
+              <h3 className="font-display font-semibold mb-4 text-secondary">Resources</h3>
               <ul className="space-y-4">
                 {footerLinks.resources.map((link) => (
                   <li key={link.name}>
@@ -123,7 +123,7 @@ export function Footer() {
 
             {/* Company */}
             <div>
-              <h3 className="font-display font-semibold mb-6 text-secondary text-lg">Company</h3>
+              <h3 className="font-display font-semibold mb-4 text-secondary">Company</h3>
               <ul className="space-y-4">
                 {footerLinks.company.map((link) => (
                   <li key={link.name}>
@@ -141,7 +141,7 @@ export function Footer() {
 
             {/* Newsletter */}
             <div>
-              <h3 className="font-display font-semibold mb-6 text-secondary text-lg">Stay Updated</h3>
+              <h3 className="font-display font-semibold mb-4 text-secondary">Stay Updated</h3>
               <p className="text-primary-foreground/70 mb-6 font-body leading-relaxed">
                 Get the latest Industry 4.0 insights and product updates.
               </p>
