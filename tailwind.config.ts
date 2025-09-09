@@ -12,12 +12,18 @@ export default {
 	theme: {
 		container: {
 			center: true,
-			padding: '2rem',
+			padding: '1.5rem',
 			screens: {
-				'2xl': '1400px'
+				'2xl': '1280px'
 			}
 		},
 		extend: {
+			spacing: {
+				'15': '3.75rem',
+				'18': '4.5rem',
+				'22': '5.5rem',
+				'30': '7.5rem'
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -78,10 +84,10 @@ export default {
 				'orange': 'var(--shadow-orange)'
 			},
 			fontFamily: {
-				sans: ['Space Grotesk', 'system-ui', 'sans-serif'],
-				display: ['Space Grotesk', 'system-ui', 'sans-serif'],
-				mono: ['JetBrains Mono', 'monospace'],
-				body: ['Space Grotesk', 'system-ui', 'sans-serif']
+				sans: ['Inter', 'Space Grotesk', 'system-ui', 'sans-serif'],
+				display: ['Space Grotesk', 'Inter', 'system-ui', 'sans-serif'],
+				mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
+				body: ['Inter', 'Space Grotesk', 'system-ui', 'sans-serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

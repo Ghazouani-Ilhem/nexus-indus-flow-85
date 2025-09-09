@@ -47,7 +47,7 @@ export function SuseioStyleHero() {
   const currentContent = slides[currentSlide];
 
   return (
-    <section className="relative min-h-screen bg-background overflow-hidden dark">
+    <section className="relative min-h-screen bg-background overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10 tech-grid" />
 
@@ -58,7 +58,7 @@ export function SuseioStyleHero() {
         <img 
           src={currentContent.image}
           alt={currentContent.alt || "Hero visual"}
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 w-auto h-[70vh] object-contain opacity-40"
+          className="absolute right-0 top-1/2 transform -translate-y-1/2 w-auto h-[65vh] md:h-[70vh] object-contain opacity-35"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-transparent"></div>
       </div>
@@ -67,33 +67,33 @@ export function SuseioStyleHero() {
 
       {/* Main Content */}
       <div className="relative z-10 flex items-center min-h-screen">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="container mx-auto px-4 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Left Content */}
             <div className="lg:col-span-12 max-w-2xl">
               {/* Badge */}
               <div className="mb-8">
-                <span className="inline-block px-6 py-3 glass-effect border-border rounded-full text-foreground text-sm font-medium tracking-wide">
+                <span className="inline-block px-5 py-2.5 glass-effect border-border rounded-full text-foreground text-sm font-medium tracking-wide">
                   {currentContent.badge}
                 </span>
               </div>
 
               {/* Main Content */}
               <div className="space-y-8 mb-12">
-                <h1 className="font-display font-bold text-foreground leading-[0.9] tracking-tight">
+                <h1 className="font-display font-bold text-foreground leading-[0.95] tracking-tight">
                   <span className="block text-4xl md:text-5xl lg:text-6xl">{currentContent.title}</span>
-                  <span className="block text-2xl md:text-3xl lg:text-4xl text-primary mt-4 font-light">
+                  <span className="block text-2xl md:text-3xl lg:text-4xl text-primary mt-3 font-normal">
                     {currentContent.subtitle}
                   </span>
                 </h1>
                 
-                <p className="text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed font-light">
+                <p className="text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed">
                   {currentContent.description}
                 </p>
               </div>
 
               {/* CTA Button */}
-              <div className="mb-12">
+              <div className="mb-10">
                 <Button 
                   variant="hero"
                   size="lg"
